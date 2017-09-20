@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MarvelService } from './marvel.service';
+import { MarvelService } from './marvel.service'; //added marvel service
 
 @Component({
   selector: 'app-root',
@@ -31,8 +31,8 @@ export class AppComponent {
     } else {
       this.marvelService.getNameStartsWith(searchString)
       .subscribe(
-        characterSearchInfo => {
-          this.characterInfo = characterSearchInfo.data.results;
+        characterInfo => {
+          this.characterInfo = characterInfo.data.results;
         }
       )
     }
